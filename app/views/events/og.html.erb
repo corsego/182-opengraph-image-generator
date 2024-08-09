@@ -1,0 +1,16 @@
+<div style="border: 1px solid #ddd; padding: 2rem; background-color: #fff; border-radius: 15px; margin: 2rem; display: flex; flex-direction: column; align-items: center; gap: 1rem; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); max-width: 600px; margin: auto;">
+  <div style="word-break: break-word; font-weight: bold; font-size: 4rem; text-align: center; color: #333;">
+    <%= @event.name %>
+  </div>
+  <div style="font-size: 2rem; color: #777; font-style: italic; font-weight: bold;">
+    <%= @event.location %>,
+    <%= @event.start_date.to_datetime.strftime('%B %d, %Y') %>
+  </div>
+  <div style="width: 100%; display: flex; justify-content: center; margin-bottom: 1rem;">
+    <%= image_tag "http://localhost:3000#{rails_blob_path(@event.image)}", style: 'max-width: 100%; height: auto; border-radius: 10px;' %>
+    <%#= image_tag "http://localhost:3000/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsiZGF0YSI6MSwicHVyIjoiYmxvYl9pZCJ9fQ==--8a5968eca5f43d315dfe06b402d555eddbcbc994/https-www-railsconf-com.jpg", style: 'max-width: 100%; height: auto; border-radius: 10px;' %>
+    <%#= image_tag url_for(@event.image), style: 'max-width: 100%; height: auto; border-radius: 10px;' %>
+    <%#= image_tag rails_blob_url(@event.image), style: 'max-width: 100%; height: auto; border-radius: 10px;' %>
+    <%#= image_tag "#{request.base_url}#{rails_blob_path(@event.image)}", style: 'max-width: 100%; height: auto; border-radius: 10px;' %>
+  </div>
+</div>

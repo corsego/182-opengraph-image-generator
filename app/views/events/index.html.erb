@@ -2,13 +2,8 @@
 
 <h1>Events</h1>
 
-<div id="events">
+<div id="events" style="display: grid; grid-template-columns: 1fr 1fr;">
   <% @events.each do |event| %>
     <%= render event %>
-    <p>
-      <%= link_to "Show this event", event %>
-    </p>
   <% end %>
 </div>
-
-<%= link_to "New event", new_event_path %>

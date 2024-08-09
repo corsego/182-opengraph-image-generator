@@ -101,6 +101,11 @@ GEM
       reline (>= 0.3.8)
     drb (2.2.1)
     erubi (1.13.0)
+    ferrum (0.15)
+      addressable (~> 2.5)
+      concurrent-ruby (~> 1.1)
+      webrick (~> 1.7)
+      websocket-driver (~> 0.7)
     globalid (1.2.1)
       activesupport (>= 6.1)
     i18n (1.14.5)
@@ -266,6 +271,7 @@ DEPENDENCIES
   bootsnap
   capybara
   debug
+  ferrum (~> 0.15)
   importmap-rails
   jbuilder
   puma (>= 5.0)

@@ -1,3 +1,8 @@
+<%= content_for :head do %>
+  <%= tag.meta(property: 'og:image', content: rails_blob_url(@event.og_image)) %>
+  <%= tag.meta(property: 'twitter:card', content: "summary_large_image") %>
+<% end %>
+
 <p style="color: green"><%= notice %></p>
 
 <%= render @event %>

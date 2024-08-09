@@ -1,7 +1,7 @@
 <div id="<%= dom_id event %>">
   <p>
     <strong>Name:</strong>
-    <%= event.name %>
+    <%= link_to event.name, event_path(event) %>
   </p>
 
   <p>
@@ -19,4 +19,6 @@
     <%= event.url %>
   </p>
 
+  <%#= image_tag event.image, width: 500 if event.image.present? && event.image.representable? %>
+  <%= image_tag event.og_image, width: 500 if event.og_image.present? && event.og_image.representable? %>
 </div>
